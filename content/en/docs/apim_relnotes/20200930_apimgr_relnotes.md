@@ -20,7 +20,7 @@ The following new features and enhancements are available in this update.
 
 The Remote host capability in API Manager has been enhanced to provide the same powerful configuration options that can be found in Policy Studio. Take advantage of creating aliases for back-ends, and apply specific changes to control a connection without having to deploy the change via Policy Studio. To learn more, see [Remote hosts](/docs/apim_reference/api_mgmt_config_web/#remote-hosts).
 
-### YAML-based configuration store
+### YAML-based configuration store (Technical Preview)
 
 This work is an initiative born from collaborative customer hackathons to make the API Gateway configuration more CI/CD/DevOps and developer-friendly.​ It involved transforming the federated configuration into YAML fragments, which can be managed using standard DevOps tools, moving away from a propriety TeamDev approach to encourage the use of standard tools, source control, and DevOps tools that could be used to facilitate and encourage a better experience for collaboration.​
 
@@ -30,9 +30,9 @@ This initiative focuses on addressing:​
 * Source code which is developer-friendly​.
 * Designed for improved DevOps capability.
 
-{{< alert title="Note" color="primary" >}}NOTE: The YAML configuration capability is released as a technical preview version which is still undergoing final testing before its official release. The feature, its software and all related content are provided on an “as is” and “as available” basis. Axway does not give any warranties, whether express or implied, as to the suitability or usability of the feature, its software or any of its content.
+**NOTE:** The YAML configuration capability is released as a technical preview version which is still undergoing final testing before its official release. The feature, its software and all related content are provided on an “as is” and “as available” basis. Axway does not give any warranties, whether express or implied, as to the suitability or usability of the feature, its software or any of its content.
 
-The XML configuration store is still supported and and is enabled as the primary configuration format.{{< /alert >}}
+The XML configuration store is still supported and is enabled as the primary configuration format.
 
 We strongly encourage our customers to take a look and explore the possibilities of the new configuration format, and provide feedback to us on this experience. To learn more, see [Axway API Management: DevOps friendly configuration capability](https://community.axway.com/s/article/Axway-API-Management-Upcoming-DevOps-friendly-capability).
 
@@ -197,6 +197,16 @@ As part of our software development life cycle we constantly review our API Mana
 
 The following capabilities have been deprecated.
 
+### API Manager Rest API's
+
+API Management REST API’s, namely versions 1.1 and 1.2 are now marked as deprecated.
+
+Note that API Manager REST API's have been updated to version 1.4. Note that version 1.3 is still supported.
+
+### Swagger Support
+
+As we are enhancing the capability of API Manager to support the latest versions of Swagger and OpenAPI, we are also deprecating Swagger version 1.1.
+
 ### Antivirus scanners
 
 API Gateway already supports the industry standard Internet Content Adaption Protocol (ICAP). From the November 2020 update the following embedded antivirus scanners will be removed:
@@ -206,6 +216,12 @@ API Gateway already supports the industry standard Internet Content Adaption Pro
 * Clam AV
 
 Content scanning is still supported using the ICAP filter, which provides out-of-the-box integration with ICAP-capable servers provided by Symantec, McAfee, OPSWAT and others, promoting ease of deployment and operational control.
+
+
+
+**NOTE:** Removal of deprecated items are planned for 30 July 2021.
+
+These items are still supported until removal, however we recommend to stop using them at your earliest convenience.
 
 ## Removed features
 
