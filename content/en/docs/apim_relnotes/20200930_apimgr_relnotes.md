@@ -34,7 +34,7 @@ This initiative focuses on addressing:​
 
 The XML configuration store is still supported and is enabled as the primary configuration format.
 
-For known limitations please refer to: https://deploy-preview-1209--axway-open-docs.netlify.app/docs/apim_yamles/apim_yamles_references/
+For known limitations please refer to:[ https://axway-open-docs.netlify.app/docs/apim_yamles/apim_yamles_references/](https://axway-open-docs.netlify.app/docs/apim_yamles/apim_yamles_references/)
 
 We strongly encourage our customers to take a look and explore the possibilities of the new configuration format, and provide feedback to us on this experience. To learn more, see [Axway API Management: DevOps friendly configuration capability](https://community.axway.com/s/article/Axway-API-Management-Upcoming-DevOps-friendly-capability).
 
