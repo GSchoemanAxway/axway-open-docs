@@ -5,7 +5,6 @@
   "date": "2019-10-02",
   "description": "Supported platforms and other system requirements for API Gateway, and specific requirements for API Gateway components."
 }
-
 {{< alert title="Note" color="primary" >}}Windows is supported only for a limited set of developer tools, see [Install developer tools on Windows](/docs/apim_installation/apigtw_install/install_dev_tools/). API Gateway and API Manager do not support Windows.{{< /alert >}}
 
 ## Operating systems and hardware
@@ -96,8 +95,8 @@ API Gateway and API Manager support the following relational databases to store 
 
 * MySQL Server 5.6, 5.7
 * MariaDB 5.5, 10.1
-* Microsoft SQL Server 2012, 2014
-* Oracle 11.2, 12.1
+* Microsoft SQL Server 2016, 2017 and 2019
+* Oracle 12.2, 18c and 19c
 * IBM DB2 10.5
 
 {{< alert title="Note" color="primary" >}}If you are using MariaDB you must use the MySQL JDBC driver with the MySQL database connection URL (for example, `jdbc:mysql://DB_HOST:3306/reports`) instead of the provided MariaDB version. You must also ensure that you are using a MySQL JDBC driver version 5.1.x or earlier (for example, 5.1.47), as later versions (for example, 6.x, 8.x) are not currently supported.{{< /alert >}}
@@ -268,17 +267,16 @@ After completing the installation and before starting the services:
 1. Create a new temporary directory that has `exec` privileges (for example, `/opt/Axway-7.7/tmp`).
 2. If you installed Cassandra during API Gateway installation, edit the file `CASSANDRA_INSTALL_DIR/conf/cassandra-env.sh` and add the following line:
 
-    ```
-    JVM_OPTS="$JVM_OPTS -Djava.io.tmpdir=<TheNewTmpDir>"
-    ```
-
+   ```
+   JVM_OPTS="$JVM_OPTS -Djava.io.tmpdir=<TheNewTmpDir>"
+   ```
 3. Create or edit the file `VDISTDIR/apigateway/conf/jvm.xml`, and add the following:
 
-    ```xml
-    <ConfigurationFragment>
-        <VMArg name="-Djava.io.tmpdir=<TheNewTmpDir>
-    </ConfigurationFragment>
-    ```
+   ```xml
+   <ConfigurationFragment>
+       <VMArg name="-Djava.io.tmpdir=<TheNewTmpDir>
+   </ConfigurationFragment>
+   ```
 
 ### Service packs
 
