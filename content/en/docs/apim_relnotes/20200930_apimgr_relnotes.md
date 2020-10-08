@@ -30,7 +30,7 @@ Validated support for the following versions of Oracle Databases:​
 
 ### User membership in multiple organizations
 
-API Manager now enables creating user membership in multiple organizations (multi-orgs). User accounts will have different roles in each organization the user is a member of. 
+API Manager now enables creating user membership in multiple organizations (multi-orgs). User accounts will have different roles in each organization the user is a member of.
 
 The following are some important changes implemented to enable this new feature.
 
