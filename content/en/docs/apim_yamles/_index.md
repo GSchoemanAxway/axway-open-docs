@@ -6,11 +6,9 @@
   "hide_readingtime": "true",
   "description": "Learn how to use YAML-based configuration with AMPLIFY API Management solution."
 }
+{{< alert title="Public beta" color="warning" >}}This feature is currently a **technical preview** and not yet supported for production use.{{< /alert >}}
+
 ## Introduction
-
-
-
-### **NOTE:** This capability is included as a Technical Preview and is not currently supported in production. 
 
 API Gateway main configuration is created through Policy Studio in XML format. This configuration can now be converted into a YAML format, edited in an IDE of your choice, and deployed to the API Gateway runtime. The YAML-based configuration allows for a human-friendly format to manage configuration, which facilitates the use of industry standard tooling and enhance the collaboration and operational options. YAML-based configuration enables:
 
