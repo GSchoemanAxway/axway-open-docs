@@ -22,9 +22,9 @@ An easy and convenient automated script to backup and restore Cassandra clusters
 
 ### Enhanced API life cycle management for Organization administrators
 
-In the [September 2020](/docs/apim_relnotes/20200930_apimgr_relnotes/#organization-administrators-can-publish-apis) release, we created the `api.manager.orgadmin.selfservice.enabled` system property to allow an Organization administrator to publish and unpublish APIs that were created in their organization without approval from an API Administrator.
+In the [September 2020](/docs/apim_relnotes/20200930_apimgr_relnotes/#organization-administrators-can-publish-apis) release, we included additional permissions for the Organization Administrator to be set using a system property, `api.manager.orgadmin.selfservice.enabled` to allow for publishing and unpublishing APIs that were created in their organization without approval from an API Administrator.
 
-In this release, we enhanced the property with new API life cycle events (deprecate, undeprecate, upgrade, and grant access to APIs), which will be made available to an Organization administrator when `api.manager.orgadmin.selfservice.enabled` is set to True.
+In this release, additional API life cycle events (deprecate, undeprecate, upgrade, and grant access to APIs), will also be enabled for an Organization administrator when `api.manager.orgadmin.selfservice.enabled` is set to True.
 
 For more information, see [System property changes](/docs/apim_reference/system_props/).
 
