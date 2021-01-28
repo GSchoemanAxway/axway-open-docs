@@ -40,7 +40,9 @@ There are no major changes in this update.
 
 <!-- As part of our software development life cycle we constantly review our API Management offering. In this update, the following capabilities have been deprecated. -->
 
-No capabilities have been deprecated in this update.
+For the January 2020 Update we annoucned the deprecation of all the Anti-Virus filters in API Gateway and we also announced that in July 2021 the filters will be removed from the API Gateway.
+
+This is a reminder  that in July 2021 we will remove the Anti-Virus filters from the API Gateway. It is recommended to user the API Gateway's ICAP capability which allows it to integrate with ICAP capable external virus scanners.
 
 ## Removed features
 
@@ -67,8 +69,8 @@ placeholder
 
 The following are known issues for this update.
 
-| Internal ID | Description                                                                                                                                                                                                                                                                                                                                   |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Internal ID | Description                                                                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RDAPI-22573 | Service pack update fails with the following message when passphrases are in use: `"Problem connecting to store: Invalid passphrase for configuration"`. |
 
 ## Update a classic (non-container) deployment
