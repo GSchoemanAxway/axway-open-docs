@@ -75,6 +75,16 @@ Host name verification is not enabled for customers who use Embedded Active MQ w
 
 **NOTE:** Enabling host name verification requires a certificate update. For more information, see [Embedded ActiveMQ settings in Policy Studio](/docs/apim_reference/general_activemq_settings/).
 
+### New SHA-256 hash algorithm option on SFTP server fingerprint check
+
+To improve security in API Gateway, a new `SHA-256 hash` algorithm option was added to [File Upload](/docs/apim_policydev/apigw_polref/routing_additional/#file-upload-filter) and [File Download](/docs/apim_policydev/apigw_polref/routing_additional/#file-download-filter) routing filters, and [FTP Poller](/docs/apim_policydev/apigw_gw_instances/general_ftp_scanner/) on SFTP server fingerprint check.
+
+The `SHA-256` algorithm option is designed to replace the existing `MD5` algorithm, and it is advisable to use it now as it is more secure.
+
+### Changes to JWT Verify filter
+
+There are new output options that can be configured for the JWT Verify filter in Policy Studio. For more information, see [JWT Verify - Output](/docs/apim_policydev/apigw_polref/integrity_additional/#verify-output).
+
 ## Deprecated features
 
 As part of our software development life cycle we constantly review our API Management offering. In this update, the following capabilities have been deprecated:
@@ -87,7 +97,9 @@ In the [January 2020](/docs/apim_relnotes/20200130_apimgr_relnotes/) update, we 
 
 Please note that the packet sniffing capability will be marked as deprecated from the May 2021 release. The removal date of this feature will be communicated in upcoming releases. The packet sniffing capability addresses very specific edge cases, and as there are more mature opensource tools available, it is not seen as a strategic capability for the API Gateway.
 
+### SFTP server fingerprint check (MD5 hash algorithm)
 
+SFTP server fingerprint check using `MD5` hash algorithm is deprecated on [File Upload](/docs/apim_policydev/apigw_polref/routing_additional/#file-upload-filter), [File Download](/docs/apim_policydev/apigw_polref/routing_additional/#file-download-filter), and [FTP Poller](/docs/apim_policydev/apigw_gw_instances/general_ftp_scanner/) for security reasons, and will be removed in the future. You must use `SHA-256` instead.
 
 ### End of Support notices
 
@@ -116,7 +128,9 @@ This version of API Gateway and API Manager includes:
 
 ### Other fixed issues
 
-table
+| Internal ID | Description |
+| ----------- | ----------- |
+| RDAPI-24200 | Content of some YAML configuration files are shuffled after upgrade causing unnecessary git diff |
 
 ## Known issues
 
