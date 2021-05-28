@@ -30,22 +30,22 @@ API Manager allows Organization Administrators and API Administrators to grant a
 
 The YAML configuration store feature reached General Availability (GA) in this update of API Gateway, and it is now production-ready.
 
-The YAML configuration store provides a more CI/CD/DevOps and developer-friendly means of creating and managing API Gateway configuration. Provided tools allows for the conversion of the federated configuration into YAML fragments, which can be managed using standard DevOps tools, moving away from a proprietary team development approach to encourage the use of standard tools, source control, and DevOps tools that can be used to facilitate and encourage a better experience for collaboration.​
+The YAML configuration store provides a more CI/CD/DevOps and developer-friendly means for creating and managing API Gateway configuration. Tooling is provided, which allows for the conversion of the federated configuration into YAML fragments that can be managed using standard DevOps tools, moving away from a proprietary team development approach. This enables the use of standard source control and DevOps tools that facilitate and encourage a better and more collaborative experience.
 
 This initiative focuses on:​
 
-* Fine-grained configuration for improved collaborative development experience​.
+* Fine-grained configuration for an improved development collaboration experience​.
 * Managing configuration as code for a developer-friendly​ experience.
 * Design for improved DevOps capability (CLI tooling, extended environmentalization).
 
-**NOTE:** The XML configuration store is the default format and is still supported.
+{{% alert title="Note" %}} The XML configuration store is the default format and is still supported. {{% /alert %}}
 
-We strongly encourage our customers to explore the possibilities of the new configuration format, and provide feedback to us on this experience.
+We strongly encourage our customers to explore the possibilities of the new configuration format and provide feedback to us on this experience.
 
 For more information, see:
 
-* [Axway API Management User Group - Learn how to DevOps your configuration](https://community.axway.com/s/article/Axway-APIM-User-Group-Learn-how-to-DevOps-your-Configuration): a 1 hour video to get you started with YAML Configuration.
-* [YAML configuration reference documentation](/docs/apim_yamles/) for more detailed information.
+* [Axway API Management User Group - Learn how to DevOps your configuration](https://community.axway.com/s/article/Axway-APIM-User-Group-Learn-how-to-DevOps-your-Configuration).
+* [YAML configuration reference documentation](/docs/apim_yamles/).
 * [Axway University YAML Entity Store](https://university.axway.com/learn/course/1362/play/1759/about-the-yaml-entity-store) free course.
 
 To follow-up on what's coming based on this capability, see [API Management Roadmap](https://community.axway.com/s/api-management).
@@ -69,11 +69,9 @@ It is important, especially when upgrading from an earlier version, to be aware 
 
 ### Embedded ActiveMQ host name verification
 
-Host name verification was introduced to alleviate a potential CWE-933 security risk, and it is enabled by default on the Embedded ActiveMQ cluster of new API Gateway installations, which choose to use Embedded Active MQ with SSL enabled.
+Host name verification was introduced to alleviate a potential CWE-933 security risk, and it is enabled by default on the Embedded ActiveMQ cluster of new API Gateway installations, which choose to use Embedded Active MQ with SSL enabled. Host name verification is now disabled for customers who use Embedded Active MQ with SSL enabled or who are updating or upgrading the product, as this will result in JMS queues unable to service requests. Enabling host name verification when using SSL is a more secure option and should be considered as part of the upgrade.
 
-Host name verification is not enabled for customers who use Embedded Active MQ with SSL enabled, who are updating or upgrading, as this will result in JMS queues unable to service requests. Enabling host name verification when using SSL is a more secure option and should be considered as part of the upgrade.
-
-**NOTE:** Enabling host name verification requires a certificate update. For more information, see [Embedded ActiveMQ settings in Policy Studio](/docs/apim_reference/general_activemq_settings/).
+Note that enabling host name verification requires a certificate update. For more information, see [Embedded ActiveMQ settings in Policy Studio](/docs/apim_reference/general_activemq_settings/).
 
 ### New SHA-256 hash algorithm option on SFTP server fingerprint check
 
@@ -95,7 +93,7 @@ In the [January 2020](/docs/apim_relnotes/20200130_apimgr_relnotes/) update, we 
 
 ### Packet Sniffing
 
-Please note that the packet sniffing capability will be marked as deprecated from the May 2021 release. The removal date of this feature will be communicated in upcoming releases. The packet sniffing capability addresses very specific edge cases, and as there are more mature opensource tools available, it is not seen as a strategic capability for the API Gateway.
+The packet sniffing capability is deprecated from this update. The removal date of this feature will be communicated in upcoming releases. The packet sniffing capability addresses very specific edge cases, and as there are more mature opensource tools available, it is not seen as a strategic capability for API Gateway.
 
 ### SFTP server fingerprint check (MD5 hash algorithm)
 
